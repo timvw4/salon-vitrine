@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Les variables de couleur (--color-primary, etc.) sont injectees dynamiquement
+ * dans le <html> depuis src/config/site.config.ts (voir layout.tsx).
+ * On met ici des valeurs de secours au cas ou.
+ */
+:root {
+  --color-primary: #1f2a2e;
+  --color-secondary: #c9a66b;
+  --color-accent: #b08968;
+  --color-ink: #222222;
+  --color-cream: #f7f3ee;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Decale les ancres pour que le header collant ne cache pas les titres. */
+  scroll-padding-top: 5rem;
+}
+
+body {
+  color: var(--color-ink);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Etat focus visible et soigne pour l'accessibilite au clavier. */
+:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Respecte les utilisateurs qui reduisent les animations. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
