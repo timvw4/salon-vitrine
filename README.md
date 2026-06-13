@@ -169,4 +169,4 @@ salon-vitrine/
 
 ---
 
-Site réalisé par **Tim V** (à personnaliser dans `site.config.ts`, champ `madeBy`).
+Site réalisé par **Ton Nom** (à personnaliser dans `site.config.ts`, champ `madeBy`).
