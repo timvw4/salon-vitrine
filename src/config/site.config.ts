@@ -310,5 +310,5 @@ export const siteConfig: SiteConfig = {
   bookingEmbedUrl: "",
 
   // --- Signature du createur du site (footer) ---
-  madeBy: "Ton Nom",
+  madeBy: "Tim VW",
 };
